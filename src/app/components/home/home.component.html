@@ -1,0 +1,4 @@
+
+<app-loading *ngIf="loading" class="animated fadeIn"></app-loading>
+
+<app-cards [movies]="movies" (click)="getMovieID()"></app-cards>
