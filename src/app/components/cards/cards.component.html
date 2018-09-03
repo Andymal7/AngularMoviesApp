@@ -1,0 +1,22 @@
+<div class="card-columns m-5">
+  <div *ngFor="let movie of movies" class="card" style="width: 18rem;">
+
+    <!-- QUEDARSE AQUI CON LAS FOTOS -->
+    <img class="card-img-top" [src]="movie | peliculaImagen" alt="Card image cap" (click)="searchMovie(movie.id)">
+    <div class="card-body">  <h5 class="card-title">{{ movie.title }}</h5>
+      Calificación
+      <a href="#" class="badge badge-primary">{{ movie.vote_average }}</a>
+      <br>
+      Votos
+      <a href="#" class="badge badge-primary">{{ movie.vote_count }}</a>
+      <br>
+      Fecha de lanzamiento
+      <a href="#" class="badge badge-primary">{{ movie.release_date }}</a>
+      <hr>
+      <p class="card-text text-justify">{{ movie.overview | slice:0:203 }}...</p>
+      <button type="button" class="btn btn-outline-primary btn-block" (click)="searchMovie(movie.id)">
+        Ver más
+      </button>
+    </div>
+  </div>
+</div>
