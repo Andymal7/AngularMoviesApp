@@ -1,0 +1,7 @@
+<app-loading *ngIf="loading" class="animated fadeIn" class="mt-5"></app-loading>
+
+<app-cards [movies]="result"></app-cards>
+
+<div class="alert alert-danger" role="alert" *ngIf="error">
+  No se han encontrado películas con ese texto
+</div>
